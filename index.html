@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Desain & Fotografi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/Style.css">
+</head>
+<body>
+
+<header>
+  <h1>Portofolio Muhammad Fajri Rosyiq</h1>
+  <p>Desain Grafis & Fotografi</p>
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌙 Mode Gelap</button>
+</header>
+
+<nav>
+  <a href="#desain">Desain</a>
+  <a href="#fotografi">Fotografi</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section class="section" id="desain">
+  <h2>Desain</h2>
+  <div class="grid">
+    <div class="card"><a href="project-desain1.html" target="_blank"><img src="https://via.placeholder.com/300x200?text=Desain+1" alt="Desain 1"></a></div>
+    <div class="card"><a href="project-desain2.html" target="_blank"><img src="https://via.placeholder.com/300x200?text=Desain+2" alt="Desain 2"></a></div>
+    <div class="card"><a href="project-desain3.html" target="_blank"><img src="https://via.placeholder.com/300x200?text=Desain+3" alt="Desain 3"></a></div>
+  </div>
+</section>
+
+<section class="section" id="fotografi">
+  <h2>Fotografi</h2>
+  <div class="grid">
+    <div class="card"><a href="../IMG/HAL 2.jpg" target="_blank"><img src="https://via.placeholder.com/300x200?text=Foto+1" alt="Foto 1"></a></div>
+    <div class="card"><a href="../IMG/HAL 3.jpg" target="_blank"><img src="https://via.placeholder.com/300x200?text=Foto+2" alt="Foto 2"></a></div>
+    <div class="card"><a href="project-foto3.html" target="_blank"><img src="https://via.placeholder.com/300x200?text=Foto+3" alt="Foto 3"></a></div>
+  </div>
+</section>
+
+<section class="section" id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: <a href="mailto:mfr01112002@email.com">mfr01112002@email.com</a></p>
+  <p>Instagram: <a href="https://instagram.com/fajri.ro" target="_blank">@fajri.ro</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Portofolio Desain & Fotografi. Dibuat dengan ❤️ oleh Kamu.</p>
+</footer>
+
+<button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.onscroll = function() {
+    const btn = document.querySelector('.scroll-top');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  };
+</script>
+
+</body>
+</html>
