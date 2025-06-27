@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio Muhammad Fajri Rosyiq</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-left">
-    <p class="intro-text">HELLO</p>
-    <h1>I'm Muhammad<br>Fajri Rosyiq<br>a visual content<br>creator.</h1>
-    <div class="hero-buttons">
-      <a href="#about" class="btn primary">MORE ABOUT ME</a>
-      <a href="#kontak" class="btn outline">GET IN TOUCH</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img src="/img/DSCF0119.jpg" alt="Fajri Rosyiq">
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank">📘</a>
-      <a href="https://twitter.com" target="_blank">🐦</a>
-      <a href="https://instagram.com/fajri.ro" target="_blank">📸</a>
-      <a href="#">🖌️</a>
-      <a href="#">📌</a>
-    </div>
-  </div>
-</header>
-
+<!-- Navigasi diletakkan di atas -->
 <nav class="nav-top">
   <div class="logo">Hai Wellcome.</div>
   <ul>
@@ -40,6 +20,29 @@
   </ul>
 </nav>
 
+<!-- Hero Section -->
+<header class="hero" id="intro">
+  <div class="hero-left">
+    <p class="intro-text">HELLO</p>
+    <h1>I'm Muhammad<br>Fajri Rosyiq<br>a visual content<br>creator.</h1>
+    <div class="hero-buttons">
+      <a href="#about" class="btn primary">MORE ABOUT ME</a>
+      <a href="#kontak" class="btn outline">GET IN TOUCH</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="/img/DSCF0119.jpg" alt="Fajri Rosyiq"/>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">📘</a>
+      <a href="https://twitter.com" target="_blank">🐦</a>
+      <a href="https://instagram.com/fajri.ro" target="_blank">📸</a>
+      <a href="#">🖌️</a>
+      <a href="#">📌</a>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
 <section class="section" id="about">
   <h2>Desain</h2>
   <div class="grid">
@@ -49,6 +52,7 @@
   </div>
 </section>
 
+<!-- Works Section -->
 <section class="section" id="works">
   <h2>Fotografi</h2>
   <div class="grid">
@@ -58,23 +62,23 @@
   </div>
 </section>
 
+<!-- Kontak Section -->
 <section class="section" id="kontak">
   <h2>Kontak</h2>
   <p>Email: <a href="mailto:mfr01112002@email.com">mfr01112002@email.com</a></p>
   <p>Instagram: <a href="https://instagram.com/fajri.ro" target="_blank">@fajri.ro</a></p>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 Portofolio Desain & Fotografi. Dibuat dengan ❤️ oleh Muhammad Fajri Rosyiq.</p>
 </footer>
 
+<!-- Scroll to Top -->
 <button class="scroll-top" onclick="scrollToTop()">↑</button>
 
+<!-- Script -->
 <script>
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
-
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
