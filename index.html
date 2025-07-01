@@ -1,151 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Muhammad Fajri Rosyiq</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <div class="logo">Creative Media</div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Muhammad Fajri Rosyiq</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">Creative Media</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
       </div>
-      <nav id="nav-menu">
-        <ul>
-          <li><a href="#tentang">Tentang</a></li>
-          <li class="dropdown">
-            <a href="#">Portofolio</a>
-            <ul class="dropdown-menu">
-              <li><a href="#foto">Fotografi</a></li>
-              <li><a href="#desain">Desain</a></li>
-            </ul>
-          </li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h1>Muhammad Fajri Rosyiq</h1>
-      <p>Fotografi | Desain</p>
-      <a href="#portofolio" class="btn">Lihat Karya</a>
-    </section>
-
-    <section id="tentang">
-      <h2 class="section-title">Tentang Saya</h2>
-      <p>
-        Saya adalah seorang freelance fotografer dan desainer grafis yang
-        berfokus pada penyediaan layanan visual kreatif untuk kebutuhan personal
-        maupun komersial. Dengan latar belakang dan pengalaman di bidang kreatif,
-        saya berkomitmen untuk menghadirkan karya visual yang kuat secara estetika
-        dan efektif dalam menyampaikan pesan.
-      </p>
-      <p>
-        Dalam bidang fotografi, saya menggunakan kamera Fujifilm X-E2 untuk
-        menghasilkan gambar dengan karakter warna dan detail yang khas. Saya
-        menangani berbagai jenis pemotretan, mulai dari fotografi produk, potret,
-        hingga dokumentasi acara, dengan pendekatan yang memperhatikan pencahayaan,
-        komposisi, dan nuansa artistik dari setiap momen yang diabadikan.
-      </p>
-      <p>
-        Untuk kebutuhan pengolahan foto dan desain grafis, saya mengandalkan
-        aplikasi profesional seperti Adobe Lightroom, Adobe Photoshop, dan Adobe
-        Illustrator. Layanan desain yang saya tawarkan mencakup branding visual,
-        materi promosi, konten digital, dan desain media sosial, yang disesuaikan
-        dengan karakter dan tujuan klien.
-      </p>
-    </section>
-
-    <section id="portofolio">
-      <h2 class="section-title">Fotografi</h2>
-      <div class="gallery">
-        <a href="potret-kasual.html" class="card">
-          <img src="/img/Picsart_25-06-24_19-06-38-626.jpg" alt="Foto 1" />
-          <p>Potret Kasual</p>
-        </a>
-        <a href="amotee.html" class="card">
-          <img src="/img/Picsart_25-06-24_22-09-55-289.jpg" alt="Foto 2" />
-          <p>Produk Lokal - Amotee</p>
-        </a>
-        <a href="foto3.html" class="card">
-          <img src="/img/Picsart_25-06-24_21-33-55-664.jpg" alt="Foto 3" />
-          <p>Enodrse Dea Bakery</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="desain">
-      <h2 class="section-title">Desain</h2>
-      <div class="gallery">
-        <a href="poster-event.html" class="card">
-          <img src="desain1.jpg" alt="Desain 1" />
-          <p>Poster Event Kampus</p>
-        </a>
-        <a href="feed-instagram.html" class="card">
-          <img src="desain2.jpg" alt="Desain 2" />
-          <p>Desain Feed Instagram</p>
-        </a>
-        <a href="branding-produk.html" class="card">
-          <img src="desain3.jpg" alt="Desain 3" />
-          <p>Mockup Branding Produk</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="kontak">
-      <h2 class="section-title">Kontak</h2>
-      <form class="contact-form" onsubmit="return kirimPesan()">
-        <input type="text" id="nama" placeholder="Nama Anda" required />
-        <input type="email" id="email" placeholder="Email Anda" required />
-        <textarea id="pesan" rows="5" placeholder="Pesan Anda" required></textarea>
-        <button type="submit" class="btn">Kirim Pesan</button>
-      </form>
-    </section>
-
-    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-      <img id="lightbox-img" src="" alt="Preview" />
     </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" onclick="toggleDropdown(event)">Portofolio</a>
+          <ul class="dropdown-menu">
+            <li><a href="#portofolio">Fotografi</a></li>
+            <li><a href="#desain">Desain</a></li>
+          </ul>
+        </li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-      <p>&copy; 2025 Muhammad Fajri Rosyiq. All rights reserved.</p>
-    </footer>
+  <section class="hero">
+    <h1>Muhammad Fajri Rosyiq</h1>
+    <p>Fotografi | Desain</p>
+    <a href="#portofolio" class="btn">Lihat Karya</a>
+  </section>
 
-    <script>
-      function kirimPesan() {
-        const nama = document.getElementById('nama').value;
-        const email = document.getElementById('email').value;
-        const pesan = document.getElementById('pesan').value;
-        alert(`Terima kasih, ${nama}! Pesan kamu sudah dikirim.`);
-        return false;
-      }
+  <section id="tentang">
+    <h2 class="section-title">Tentang Saya</h2>
+    <p>Saya adalah seorang freelance fotografer dan desainer grafis...</p>
+    <p>Dalam bidang fotografi, saya menggunakan kamera Fujifilm X-E2...</p>
+    <p>Untuk pengolahan foto dan desain grafis, saya mengandalkan Adobe...</p>
+  </section>
 
-      function bukaLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
-        document.getElementById('lightbox').style.display = 'flex';
-      }
+  <section id="portofolio">
+    <h2 class="section-title">Fotografi</h2>
+    <div class="gallery">
+      <a href="potret-kasual.html" class="card">
+        <img src="/img/Picsart_25-06-24_19-06-38-626.jpg" alt="Foto 1" />
+        <p>Potret Kasual</p>
+      </a>
+      <a href="amotee.html" class="card">
+        <img src="/img/Picsart_25-06-24_22-09-55-289.jpg" alt="Foto 2" />
+        <p>Produk Lokal - Amotee</p>
+      </a>
+      <a href="foto3.html" class="card">
+        <img src="/img/Picsart_25-06-24_21-33-55-664.jpg" alt="Foto 3" />
+        <p>Endorse Dea Bakery</p>
+      </a>
+    </div>
+  </section>
 
-      function toggleMenu() {
-        const nav = document.getElementById('nav-menu');
-        nav.classList.toggle('active');
-      }
+  <section id="desain">
+    <h2 class="section-title">Desain</h2>
+    <div class="gallery">
+      <a href="poster-event.html" class="card">
+        <img src="desain1.jpg" alt="Desain 1" />
+        <p>Poster Event Kampus</p>
+      </a>
+      <a href="feed-instagram.html" class="card">
+        <img src="desain2.jpg" alt="Desain 2" />
+        <p>Desain Feed Instagram</p>
+      </a>
+      <a href="branding-produk.html" class="card">
+        <img src="desain3.jpg" alt="Desain 3" />
+        <p>Mockup Branding Produk</p>
+      </a>
+    </div>
+  </section>
 
-      document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', () => {
-          document.getElementById('nav-menu').classList.remove('active');
-        });
+  <section id="kontak">
+    <h2 class="section-title">Kontak</h2>
+    <form class="contact-form" onsubmit="return kirimPesan()">
+      <input type="text" id="nama" placeholder="Nama Anda" required />
+      <input type="email" id="email" placeholder="Email Anda" required />
+      <textarea id="pesan" rows="5" placeholder="Pesan Anda" required></textarea>
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Muhammad Fajri Rosyiq. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    function kirimPesan() {
+      const nama = document.getElementById('nama').value;
+      alert(`Terima kasih, ${nama}! Pesan kamu sudah dikirim.`);
+      return false;
+    }
+
+    function bukaLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Menutup menu setelah klik
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('active');
       });
-    </script>
-  </body>
+    });
+
+    // Untuk membuka dropdown di mobile
+    function toggleDropdown(e) {
+      e.preventDefault();
+      const dropdown = e.target.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
 </html>
