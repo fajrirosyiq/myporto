@@ -1,7 +1,8 @@
 :root {
   --warna-utama: #00ABB3;
   --warna-hitam: #EAEAEA;
-  --warna-putih: #3C4048;
+  --warna-putih: #FFFFFF;
+  --warna-tulisan: #3C4048;
   --warna-abu: #B2B2B2;
   --warna-abu-terang: #F5F5F5;
   --warna-aksen: #00ABB3;
@@ -16,7 +17,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--warna-hitam);
-  color: var(--warna-putih);
+  color: var(--warna-tulisan);
   line-height: 1.6;
 }
 
@@ -25,7 +26,7 @@ header {
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .header-container {
@@ -34,7 +35,12 @@ header {
   align-items: center;
 }
 
-/* Tombol hamburger (icon bar) */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -42,33 +48,67 @@ header {
   color: white;
 }
 
-/* Dropdown */
-nav ul li.dropdown {
+/* Navigasi Utama */
+nav {
+  display: none;
+  position: sticky;
+  top: 60px;
+  z-index: 999;
+}
+
+nav.active {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav ul li {
   position: relative;
 }
+
+nav ul li a {
+  color: var(--warna-tulisan);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: var(--warna-utama);
+}
+
+/* Dropdown */
 nav ul li .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
-  color: black;
+  background-color: var(--warna-putih);
+  color: var(--warna-tulisan);
   min-width: 150px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   padding: 0;
   list-style: none;
   z-index: 100;
 }
+
 nav ul li .dropdown-menu li {
-  margin: 0;
+  width: 100%;
 }
+
 nav ul li .dropdown-menu a {
-  display: block;
   padding: 10px;
-  color: var(--warna-putih);
-  text-decoration: none;
 }
+
 nav ul li:hover .dropdown-menu {
   display: block;
 }
@@ -77,62 +117,35 @@ nav ul li:hover .dropdown-menu {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    margin-left: auto;
-    padding-right: 1rem;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav.active {
-    display: block;
   }
 
   nav ul {
     flex-direction: column;
-    background-color: var(--warna-utama);
-    padding: 1rem 0;
+    align-items: center;
+    background-color: var(--warna-putih);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     gap: 0.5rem;
   }
 
   nav ul li {
+    width: 100%;
     text-align: center;
+    border-bottom: 1px solid var(--warna-abu);
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
   }
 
   nav ul li .dropdown-menu {
     position: static;
-    background: var(--warna-abu-terang);
-  }
-
-  nav ul li:hover .dropdown-menu {
-    display: block;
+    box-shadow: none;
+    background-color: var(--warna-abu-terang);
   }
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-}
-
-nav a:hover {
-  color: var(--warna-abu);
-}
-
+/* Hero */
 .hero {
   padding: 5rem 2rem;
   text-align: center;
@@ -164,10 +177,11 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: var(--warna-putih);
+  background-color: var(--warna-tulisan);
   color: white;
 }
 
+/* Section Umum */
 section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -181,6 +195,7 @@ section {
   text-align: center;
 }
 
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -192,7 +207,7 @@ section {
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -212,23 +227,26 @@ section {
 .card p {
   padding: 1rem;
   font-size: 1rem;
-  color: var(--warna-putih);
+  color: var(--warna-tulisan);
 }
 
+/* Form Kontak */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.75rem;
   border: 1px solid var(--warna-abu);
   border-radius: 6px;
   background-color: white;
-  color: var(--warna-putih);
+  color: var(--warna-tulisan);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -236,12 +254,7 @@ footer {
   color: white;
 }
 
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -265,18 +278,8 @@ footer {
   display: flex;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 767px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -306,37 +309,8 @@ footer {
     font-size: 0.9rem;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 0.9rem;
   }
-}
-
-nav ul {
-  flex-direction: column;
-  background-color: white; /* ubah background agar kontras */
-  padding: 1rem;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav ul li {
-  padding: 0.8rem 0;
-  text-align: center;
-  border-bottom: 1px solid var(--warna-abu);
-}
-
-nav ul li:last-child {
-  border-bottom: none;
-}
-
-nav ul li a {
-  color: var(--warna-putih);
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
-  display: block;
-}
-
-nav ul li a:hover {
-  color: var(--warna-utama);
 }
