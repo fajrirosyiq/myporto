@@ -31,6 +31,84 @@ header {
   z-index: 10;
 }
 
+/* Tombol hamburger (icon bar) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown */
+nav ul li.dropdown {
+  position: relative;
+}
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  min-width: 150px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0;
+  list-style: none;
+  z-index: 100;
+}
+nav ul li .dropdown-menu li {
+  margin: 0;
+}
+nav ul li .dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: var(--warna-putih);
+  text-decoration: none;
+}
+nav ul li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding-right: 1rem;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: var(--warna-utama);
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li .dropdown-menu {
+    position: static;
+    background: var(--warna-abu-terang);
+  }
+
+  nav ul li:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;

@@ -12,15 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/cobastyle.css" />
   </head>
   <body>
     <header>
-      <div class="logo">Creative Media</div>
-      <nav>
+  <div class="logo">Creative Media</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+      <nav id="nav-menu">
         <ul>
           <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#portofolio">Portofolio</a></li>
+          <li class="dropdown">
+            <a href="#portofolio">Portofolio</a>
+            <ul class="dropdown-menu">
+              <li><a href="#portofolio">Fotografi</a></li>
+              <li><a href="#desain">Desain</a></li>
+            </ul>
+          </li>
           <li><a href="#kontak">Kontak</a></li>
         </ul>
       </nav>
@@ -54,12 +63,6 @@
         Illustrator. Layanan desain yang saya tawarkan mencakup branding visual,
         materi promosi, konten digital, dan desain media sosial, yang disesuaikan
         dengan karakter dan tujuan klien.
-      </p>
-      <p>
-        Saya senantiasa mengedepankan profesionalisme, ketepatan waktu, dan
-        komunikasi yang terbuka dalam setiap proyek yang saya jalani. Fleksibilitas
-        sebagai freelancer memungkinkan saya untuk memberikan perhatian penuh pada
-        setiap detail demi mencapai hasil terbaik.
       </p>
     </section>
 
@@ -129,6 +132,11 @@
       function bukaLightbox(src) {
         document.getElementById('lightbox-img').src = src;
         document.getElementById('lightbox').style.display = 'flex';
+      }
+
+      function toggleMenu() {
+        const nav = document.getElementById('nav-menu');
+        nav.classList.toggle('active');
       }
     </script>
   </body>
